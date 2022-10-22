@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1666380186057" clover="3.2.0">
+  <project timestamp="1666380186057" name="All files">
+    <metrics statements="197" coveredstatements="186" conditionals="27" coveredconditionals="20" methods="82" coveredmethods="78" elements="306" coveredelements="284" complexity="0" loc="197" ncloc="197" packages="11" files="15" classes="15"/>
+    <package name="app.error">
+      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="ErrorExternoAlPasarParams.ts" path="C:\Users\juanp\OneDrive\Documentos\Programacion\AprendiendoAngular\.Actuales\GestionaTuGim_Final\app\error\ErrorExternoAlPasarParams.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="4" count="7" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.interfaces">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="ISuscripciones.ts" path="C:\Users\juanp\OneDrive\Documentos\Programacion\AprendiendoAngular\.Actuales\GestionaTuGim_Final\app\interfaces\ISuscripciones.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="app.models.main.pago">
+      <metrics statements="26" coveredstatements="26" conditionals="6" coveredconditionals="6" methods="17" coveredmethods="17"/>
+      <file name="Pago.ts" path="C:\Users\juanp\OneDrive\Documentos\Programacion\AprendiendoAngular\.Actuales\GestionaTuGim_Final\app\models\main\pago\Pago.ts">
+        <metrics statements="26" coveredstatements="26" conditionals="6" coveredconditionals="6" methods="17" coveredmethods="17"/>
+        <line num="21" count="29" type="stmt"/>
+        <line num="22" count="29" type="stmt"/>
+        <line num="23" count="29" type="stmt"/>
+        <line num="24" count="29" type="stmt"/>
+        <line num="25" count="29" type="stmt"/>
+        <line num="26" count="29" type="stmt"/>
+        <line num="33" count="9" type="cond" truecount="2" falsecount="0"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="37" count="8" type="stmt"/>
+        <line num="42" count="6" type="stmt"/>
+        <line num="47" count="8" type="stmt"/>
+        <line num="51" count="4" type="stmt"/>
+        <line num="57" count="10" type="cond" truecount="4" falsecount="0"/>
+        <line num="58" count="2" type="stmt"/>
+        <line num="61" count="8" type="stmt"/>
+        <line num="65" count="5" type="stmt"/>
+        <line num="71" count="8" type="stmt"/>
+        <line num="75" count="4" type="stmt"/>
+        <line num="81" count="14" type="stmt"/>
+        <line num="85" count="5" type="stmt"/>
+        <line num="90" count="2" type="stmt"/>
+        <line num="96" count="13" type="stmt"/>
+        <line num="100" count="4" type="stmt"/>
+        <line num="105" count="8" type="stmt"/>
+        <line num="109" count="8" type="stmt"/>
+        <line num="114" count="10" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.models.main.pagoFilter">
+      <metrics statements="22" coveredstatements="21" conditionals="8" coveredconditionals="7" methods="11" coveredmethods="11"/>
+      <file name="PagoFilter.ts" path="C:\Users\juanp\OneDrive\Documentos\Programacion\AprendiendoAngular\.Actuales\GestionaTuGim_Final\app\models\main\pagoFilter\PagoFilter.ts">
+        <metrics statements="22" coveredstatements="21" conditionals="8" coveredconditionals="7" methods="11" coveredmethods="11"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="17" count="10" type="stmt"/>
+        <line num="18" count="10" type="stmt"/>
+        <line num="19" count="10" type="stmt"/>
+        <line num="20" count="10" type="stmt"/>
+        <line num="21" count="10" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="35" count="1" type="stmt"/>
+        <line num="39" count="2" type="stmt"/>
+        <line num="45" count="3" type="stmt"/>
+        <line num="46" count="3" type="cond" truecount="4" falsecount="0"/>
+        <line num="47" count="2" type="stmt"/>
+        <line num="49" count="1" type="stmt"/>
+        <line num="53" count="2" type="stmt"/>
+        <line num="58" count="1" type="stmt"/>
+        <line num="59" count="1" type="cond" truecount="3" falsecount="1"/>
+        <line num="60" count="0" type="stmt"/>
+        <line num="62" count="1" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+        <line num="71" count="1" type="stmt"/>
+        <line num="75" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.models.main.suscripcion">
+      <metrics statements="8" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="5" coveredmethods="3"/>
+      <file name="Suscripcion.ts" path="C:\Users\juanp\OneDrive\Documentos\Programacion\AprendiendoAngular\.Actuales\GestionaTuGim_Final\app\models\main\suscripcion\Suscripcion.ts">
+        <metrics statements="8" coveredstatements="5" conditionals="2" coveredconditionals="1" methods="5" coveredmethods="3"/>
+        <line num="11" count="65" type="stmt"/>
+        <line num="12" count="65" type="stmt"/>
+        <line num="17" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="26" count="1" type="cond" truecount="1" falsecount="1"/>
+        <line num="27" count="0" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.models.main.suscriptor">
+      <metrics statements="27" coveredstatements="27" conditionals="5" coveredconditionals="5" methods="19" coveredmethods="19"/>
+      <file name="Suscriptor.ts" path="C:\Users\juanp\OneDrive\Documentos\Programacion\AprendiendoAngular\.Actuales\GestionaTuGim_Final\app\models\main\suscriptor\Suscriptor.ts">
+        <metrics statements="27" coveredstatements="27" conditionals="5" coveredconditionals="5" methods="19" coveredmethods="19"/>
+        <line num="22" count="27" type="stmt"/>
+        <line num="23" count="27" type="stmt"/>
+        <line num="24" count="27" type="stmt"/>
+        <line num="25" count="27" type="stmt"/>
+        <line num="26" count="27" type="stmt"/>
+        <line num="31" count="7" type="stmt"/>
+        <line num="35" count="5" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="44" count="1" type="stmt"/>
+        <line num="49" count="5" type="cond" truecount="4" falsecount="0"/>
+        <line num="50" count="2" type="stmt"/>
+        <line num="52" count="3" type="stmt"/>
+        <line num="56" count="1" type="stmt"/>
+        <line num="61" count="3" type="stmt"/>
+        <line num="65" count="1" type="stmt"/>
+        <line num="70" count="1" type="stmt"/>
+        <line num="74" count="3" type="stmt"/>
+        <line num="79" count="6" type="stmt"/>
+        <line num="83" count="17" type="stmt"/>
+        <line num="88" count="1" type="stmt"/>
+        <line num="94" count="3" type="stmt"/>
+        <line num="99" count="5" type="stmt"/>
+        <line num="103" count="4" type="stmt"/>
+        <line num="113" count="9" type="stmt"/>
+        <line num="115" count="9" type="stmt"/>
+        <line num="117" count="9" type="stmt"/>
+        <line num="121" count="14" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.models.main.usuario">
+      <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <file name="Usuario.ts" path="C:\Users\juanp\OneDrive\Documentos\Programacion\AprendiendoAngular\.Actuales\GestionaTuGim_Final\app\models\main\usuario\Usuario.ts">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+        <line num="10" count="19" type="stmt"/>
+        <line num="11" count="19" type="stmt"/>
+        <line num="15" count="12" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="24" count="12" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="app.services">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="PagadorService.ts" path="C:\Users\juanp\OneDrive\Documentos\Programacion\AprendiendoAngular\.Actuales\GestionaTuGim_Final\app\services\PagadorService.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
+    <package name="app.utils">
+      <metrics statements="36" coveredstatements="34" conditionals="0" coveredconditionals="0" methods="11" coveredmethods="9"/>
+      <file name="ConfiguracionesENV.ts" path="C:\Users\juanp\OneDrive\Documentos\Programacion\AprendiendoAngular\.Actuales\GestionaTuGim_Final\app\utils\ConfiguracionesENV.ts">
+        <metrics statements="21" coveredstatements="21" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="7" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
+        <line num="15" count="6" type="stmt"/>
+        <line num="16" count="6" type="stmt"/>
+        <line num="19" count="6" type="stmt"/>
+        <line num="20" count="6" type="stmt"/>
+        <line num="21" count="6" type="stmt"/>
+        <line num="24" count="6" type="stmt"/>
+        <line num="25" count="6" type="stmt"/>
+        <line num="26" count="6" type="stmt"/>
+        <line num="27" count="6" type="stmt"/>
+        <line num="30" count="6" type="stmt"/>
+        <line num="33" count="6" type="stmt"/>
+        <line num="36" count="6" type="stmt"/>
+        <line num="39" count="6" type="stmt"/>
+        <line num="40" count="6" type="stmt"/>
+        <line num="41" count="6" type="stmt"/>
+        <line num="44" count="6" type="stmt"/>
+        <line num="48" count="6" type="stmt"/>
+      </file>
+      <file name="CustomLogger.ts" path="C:\Users\juanp\OneDrive\Documentos\Programacion\AprendiendoAngular\.Actuales\GestionaTuGim_Final\app\utils\CustomLogger.ts">
+        <metrics statements="3" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+        <line num="5" count="0" type="stmt"/>
+        <line num="9" count="21" type="stmt"/>
+        <line num="13" count="0" type="stmt"/>
+      </file>
+      <file name="helpers.ts" path="C:\Users\juanp\OneDrive\Documentos\Programacion\AprendiendoAngular\.Actuales\GestionaTuGim_Final\app\utils\helpers.ts">
+        <metrics statements="12" coveredstatements="12" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="7"/>
+        <line num="2" count="102" type="stmt"/>
+        <line num="6" count="29" type="stmt"/>
+        <line num="10" count="27" type="stmt"/>
+        <line num="14" count="19" type="stmt"/>
+        <line num="18" count="27" type="stmt"/>
+        <line num="23" count="11" type="stmt"/>
+        <line num="24" count="11" type="stmt"/>
+        <line num="34" count="19" type="stmt"/>
+        <line num="35" count="19" type="stmt"/>
+        <line num="36" count="19" type="stmt"/>
+        <line num="37" count="190" type="stmt"/>
+        <line num="40" count="19" type="stmt"/>
+      </file>
+    </package>
+    <package name="test.services">
+      <metrics statements="19" coveredstatements="14" conditionals="6" coveredconditionals="1" methods="3" coveredmethods="3"/>
+      <file name="PagadorServiceMock.ts" path="C:\Users\juanp\OneDrive\Documentos\Programacion\AprendiendoAngular\.Actuales\GestionaTuGim_Final\test\services\PagadorServiceMock.ts">
+        <metrics statements="19" coveredstatements="14" conditionals="6" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="11" count="1" type="stmt"/>
+        <line num="18" count="7" type="stmt"/>
+        <line num="19" count="7" type="stmt"/>
+        <line num="20" count="7" type="stmt"/>
+        <line num="21" count="7" type="stmt"/>
+        <line num="22" count="7" type="stmt"/>
+        <line num="23" count="7" type="stmt"/>
+        <line num="24" count="7" type="stmt"/>
+        <line num="25" count="7" type="stmt"/>
+        <line num="28" count="7" type="stmt"/>
+        <line num="30" count="7" type="stmt"/>
+        <line num="32" count="7" type="stmt"/>
+        <line num="41" count="7" type="cond" truecount="1" falsecount="1"/>
+        <line num="42" count="7" type="stmt"/>
+        <line num="43" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="44" count="0" type="stmt"/>
+        <line num="45" count="0" type="cond" truecount="0" falsecount="2"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="48" count="0" type="stmt"/>
+      </file>
+    </package>
+    <package name="test.utils">
+      <metrics statements="51" coveredstatements="51" conditionals="0" coveredconditionals="0" methods="9" coveredmethods="9"/>
+      <file name="CrearPagos.ts" path="C:\Users\juanp\OneDrive\Documentos\Programacion\AprendiendoAngular\.Actuales\GestionaTuGim_Final\test\utils\CrearPagos.ts">
+        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="11" count="2" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="34" count="3" type="stmt"/>
+        <line num="35" count="3" type="stmt"/>
+        <line num="36" count="3" type="stmt"/>
+        <line num="38" count="3" type="stmt"/>
+      </file>
+      <file name="CrearSuscriptores.ts" path="C:\Users\juanp\OneDrive\Documentos\Programacion\AprendiendoAngular\.Actuales\GestionaTuGim_Final\test\utils\CrearSuscriptores.ts">
+        <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="9" count="3" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="19" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="23" count="1" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="27" count="1" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="32" count="2" type="stmt"/>
+        <line num="33" count="2" type="stmt"/>
+        <line num="34" count="2" type="stmt"/>
+        <line num="35" count="2" type="stmt"/>
+        <line num="36" count="2" type="stmt"/>
+        <line num="37" count="2" type="stmt"/>
+      </file>
+      <file name="CrearUsuarios.ts" path="C:\Users\juanp\OneDrive\Documentos\Programacion\AprendiendoAngular\.Actuales\GestionaTuGim_Final\test\utils\CrearUsuarios.ts">
+        <metrics statements="16" coveredstatements="16" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="8" count="10" type="stmt"/>
+        <line num="12" count="1" type="stmt"/>
+        <line num="13" count="1" type="stmt"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="18" count="1" type="stmt"/>
+        <line num="20" count="1" type="stmt"/>
+        <line num="21" count="1" type="stmt"/>
+        <line num="22" count="1" type="stmt"/>
+        <line num="24" count="1" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="30" count="9" type="stmt"/>
+        <line num="31" count="9" type="stmt"/>
+        <line num="32" count="9" type="stmt"/>
+        <line num="34" count="9" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
