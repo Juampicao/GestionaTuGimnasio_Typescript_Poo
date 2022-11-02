@@ -1,13 +1,16 @@
+import { NuevoPago } from "../../models/main/pago/NuevoPago";
 import { Pago } from "../../models/main/pago/Pago";
+import { PagoSuscripcion } from "../../models/main/pago/PagoSuscripcion";
 import { Suscriptor } from "../../models/main/suscriptor/Suscriptor";
 
 export interface IPagadorService{
     
-    CrearNuevoPagoSuscripcion: (suscriptor : Suscriptor) => Pago, 
+    CrearNuevoPagoSuscripcion(suscriptor : Suscriptor) : PagoSuscripcion, 
 
-    CrearNuevoPagoMatricula(suscripcion: Suscriptor) :  Pago, 
+    CrearNuevoPagoMatricula(suscripcion: Suscriptor) :  NuevoPago, 
 
-    //Todo: @Params Producto: Producto => Pago. 
-    CrearNuevoPagoProducto() : Pago;
+    CrearNuevoPagoProducto(producto: any): NuevoPago;
+    
+    CrearNuevoPagoExtraordinario(motivo: any): NuevoPago;
 
 }

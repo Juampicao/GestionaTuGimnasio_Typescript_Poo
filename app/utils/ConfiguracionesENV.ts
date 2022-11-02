@@ -1,6 +1,6 @@
 // - - - - -  FECHA CREACION - - - - - //
 
-import { IEstadoSuscriptor, IMetodoPago, ITiposuscripcion, IValorTipoSuscripcion } from "../interfaces/ISuscripciones";
+import { IEstadoSuscriptor, IMetodoActualizacionFechaVencimiento, IMetodoPago, ITiposuscripcion, IValorTipoSuscripcion } from "../interfaces/ISuscripciones";
 import { Suscripcion } from "../models/main/suscripcion/Suscripcion";
 
 //? FechaCreacionPorDefecto
@@ -44,8 +44,12 @@ export const suscripcionNombreDefault: ITiposuscripcion = ITiposuscripcion.PREMI
 export const estadoSuscriptorDefault: IEstadoSuscriptor = IEstadoSuscriptor.DEUDOR;
 
 
-// - - - - -  DIAS DE ACTUALIZACION PARA LA NUEVA FECHA DE ACTUALIZACION  - -  - - - - //            
+// - - - - -   NUEVA FECHA DE ACTUALIZACION  - -  - - - - //            
 export const DiasActualizacionFechaVencimientoDefault: number = 10;
+export const MetodoActualizacionVencimientoDefault: IMetodoActualizacionFechaVencimiento = IMetodoActualizacionFechaVencimiento.FECHAVENCIMIENTOSUSCRIPCION;
+
+
+
 
 
             

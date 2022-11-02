@@ -6,30 +6,27 @@ import { Usuario } from "../usuario/Usuario";
 // import { IdPago } from "../../id/IdPago";
 import { Suscripcion } from "../suscripcion/Suscripcion";
 import { generatePagoId } from "../../../utils/helpers";
+import { MetodoPago } from "../../helpers/MetodoPago";
 import { CustomLogger } from "../../../utils/CustomLogger";
 
 let customlogger = new CustomLogger()
 
 
-export class Pago {
-    private _montoTotal: IValorTipoSuscripcion; 
-    private _tipoSuscripcion: ITiposuscripcion; 
-    private _fechaCreacion: Date; 
-    private _metodoPago: IMetodoPago;
-    private _creador: Usuario; 
-    private _suscriptorPagador: Suscriptor; 
-    private _id: number;
-    private _estadoPago: IEstadoPago;
-    private _tipoPago: ITipoPago;
+export abstract class NuevoPago {
+    protected _montoTotal: IValorTipoSuscripcion; 
+    protected _fechaCreacion: Date; 
+    protected _metodoPago: IMetodoPago;
+    protected _creador: Usuario; 
+    protected _id: number;
+    protected _estadoPago: IEstadoPago;
+    protected _tipoPago: ITipoPago;
 
     constructor() {
         this._montoTotal = new Suscripcion()._valor; 
-        this._tipoSuscripcion = new Suscripcion()._nombre;
         this._fechaCreacion = fechaCreacionDefault; 
         this._metodoPago = metodoPagoDefault;
         this._id = generatePagoId();
         this._estadoPago = IEstadoPago.GENERADO;
-        this._tipoPago = ITipoPago.PAGOSUSCRIPCION;
     }
 
     //* Monto Total
@@ -48,14 +45,7 @@ export class Pago {
         return this._montoTotal;
     }
 
-    //* Tipo Suscripcion
-    set tipoSuscripcion(tipoSuscripcion: ITiposuscripcion) {
-        this._tipoSuscripcion = tipoSuscripcion
-    }
 
-    get tipoSuscripcion() : ITiposuscripcion{
-        return this._tipoSuscripcion
-    }
 
     //* Fecha Creacion
     set fechaCreacion(fechaCreacion: Date) {
@@ -74,6 +64,7 @@ export class Pago {
 
     //* Metodo pago
     set metodoPago(metodoPago: IMetodoPago) {
+
         this._metodoPago = metodoPago; 
     }
 
@@ -81,14 +72,20 @@ export class Pago {
         return this._metodoPago; 
     }
 
-    //* Suscriptor Pagador
-    set suscriptorPagador(suscriptorPagador: Suscriptor) {
-        //! Si no existe en la BD, throw error. Buscar entre todos los suscriptores, si alguno existe, guardar el pago.
-        this._suscriptorPagador = suscriptorPagador;
-    }
-
-    get suscriptorPagador(): Suscriptor {        
-        return this._suscriptorPagador;
+    /**
+     * Permite pagar con mas 1 metodo. 
+     * @param metodoPago : Objeto MetodoPago
+     * ! 
+     * Todo: ¿Como guardo la cantidad que pago en efectivo y la de tarjeta?
+     */
+    pagarDosMetodosPagoDiferentes(metodoPago: MetodoPago) {
+        
+        if (metodoPago.montoTotalPagado() > this._montoTotal) {
+            throw new ErrorExternoAlPasarParams(`El monto Pagado no puede ser menor al valor de la suscripcion`);
+        }
+        
+        return "exito"
+        
     }
 
     //* Id
@@ -115,17 +112,13 @@ export class Pago {
         return this._estadoPago; 
     }
 
+
     //* Tipo Pago
-
-    set tipoPago(tipoPago: ITipoPago) {
-        this._tipoPago = tipoPago;
-    }
-
     get tipoPago(): ITipoPago{
         return this._tipoPago;
     }
 
-     /**
+    /**
      * Verifica si el pago se encuentra entre los dos parametros.
      * @param fechaCreacionSince 
      * @param fechaCreacionUntil 
@@ -161,11 +154,8 @@ export class Pago {
         return false;       
     }
       
-      
     toString(): string {
-          return `Pago: montoTotal=${this._montoTotal}, fechaCreacion=${this._fechaCreacion}, tipoSuscripcion=${this._tipoSuscripcion}, metodoPago=${this._metodoPago}, creador=${this._creador}, id=${this._id}, suscriptorPagador=${this._suscriptorPagador}`
+          return `Pago: montoTotal=${this._montoTotal}, fechaCreacion=${this._fechaCreacion}, metodoPago=${this._metodoPago}, creador=${this._creador}, id=${this._id}, tipoPago=${this._tipoPago}`
       }
 }
 
-
-// How to sum 1 + 1 in nodejs?
