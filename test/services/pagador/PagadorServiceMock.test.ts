@@ -212,12 +212,15 @@ describe('Escenario 02 - PAGADOR SERVICE MOCK - CREAR PAGO SUSCRIPCION  - Fecha 
 });
 
 
-// Tip 1: Nombre CrearPago, no nuevo pago. Verbos.
-// Tip 2: CrearNuevoPagoSuscripcion.
-// Tip 3: CrearPagoOTROTIPODEPAGO.
-// Tip 4: Hacer el userStory. Ser muy especifico. ¿Que es un suscriptor? un cliente que paga mensualemente. Hay varios tipos de suscripcion. ayuda a pensar la solucion final.
-// tip 5: Si quiere pagar mitad efectivo y mitad tarjeta? ¿Como se hace?
-// tip 6: El cambio de estado, la fecha nueva de vencimiento, cambia desde aca? o llamo a otra funcion?
-// tip 7: Datapatch, es mala palabra. Te olvidas de la logica del negocio y vas a la base del negocio. El estado del suscriptor, no deberia poder tocarse. Es una funcion.
-// tipo 8: Ciclo de vida del objeto pago. Hacer el hueso hoy. Pago tiene 2 pasos. 1)Generar 2)Completar. Hoy, son el mismo paso, es decir, cuando genero, se completa. Pero dejarlo bien estructurado, para que en el futuro estos pasos, puedan ser independientes.
-// tipo 9: La funcion que cambia de deudor activo, es llamada al realizar el pago. No esta en el pago. El valor 30 dias, debe aun estar en otro sitio (configuracionENV default hoy). Es decir , 3 lugares diferentes.
+// TODO
+// Casos TEST a pensar
+
+//? 1 - Suscriptor FREE por 30 dias
+    // ¿Tengo que crear un pago? ¿Con monto 0? 
+    // if (tipoSuscripcion.metodoPagoOFerta !== void) {
+       //PagoSuscripcion.metodoPago = metodoPago  
+    //} else 
+//? 2 - Suscriptor especial oferta del 15 % sobre la suscripcion "STANDAR"
+//? 3 - Crear una oferta por pagos en efectivo de TODAS suscripciones con metodoPago efectivo.
+    // Si "metodoPago = Efectivo", Le hace un descuento del 20%. 
+    // ¿Quien es el responsable de determinar el monto? El servicioPagador no. La suscripcion con sus valores. 

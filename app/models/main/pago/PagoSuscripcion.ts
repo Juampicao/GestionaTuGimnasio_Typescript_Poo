@@ -3,7 +3,7 @@ import { suscripcionNombreDefault } from "../../../utils/ConfiguracionesENV";
 import { Suscriptor } from "../suscriptor/Suscriptor";
 import { NuevoPago } from "./NuevoPago";
 
-export class PagoSuscripcion extends NuevoPago{
+export class PagoSuscripcion extends NuevoPago {
     
     private _tipoSuscripcion: ITiposuscripcion; 
     private _suscriptorPagador: Suscriptor; 

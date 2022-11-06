@@ -11,6 +11,7 @@ import { CustomLogger } from "../../../utils/CustomLogger";
 let customlogger = new CustomLogger()
 
 
+
 export class Pago {
     private _montoTotal: IValorTipoSuscripcion; 
     private _tipoSuscripcion: ITiposuscripcion; 
@@ -169,3 +170,6 @@ export class Pago {
 
 
 // How to sum 1 + 1 in nodejs?
+
+let pago = new Pago()
+pago.montoTotal = IValorTipoSuscripcion.GOLD; 

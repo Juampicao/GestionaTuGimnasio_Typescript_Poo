@@ -29,6 +29,7 @@ export const minFechaNacimiento : Date = new Date(1900, 1,1)
 // - - - - -  Monto Pago - -  - - - - //
 export const montoTotalDefault: IValorTipoSuscripcion = IValorTipoSuscripcion.PREMIUM
 
+export const montoTotalMax: number = 100000;
 // - - - - -  Tipo Suscripcion  - -  - - - - //
 export const tipoSuscripcionDefault: ITiposuscripcion.PREMIUM = ITiposuscripcion.PREMIUM
 

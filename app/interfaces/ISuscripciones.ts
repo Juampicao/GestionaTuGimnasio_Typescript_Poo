@@ -5,15 +5,17 @@ export enum ITiposuscripcion {
     PLATINUM = "platinum",
     GOLD = "gold",
     CANTIDADVECESUNICAS10 = "cantidadVecesUnicas10", // Todo, suscripcion por cantidad de usos.
+    FREE = "free",
 }
 
 export enum IValorTipoSuscripcion {
-    VOID = "",
+    // VOID = "",
     PREMIUM = 5000,
     PLATINUM = 7500,
     GOLD = 10000,
     CANTIDADVECESUNICAS10 = 3000, // Todo, suscripcion por cantidad de usos.
     PRUEBA = -1000,
+    FREE = 0,
 }
 
 export enum IMetodoPago {

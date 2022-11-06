@@ -44,6 +44,13 @@ export class PagadorServiceMock  implements IPagadorService {
         return pagoSuscripcion;
     }
 
+    // Todo 
+    CrearNuevoPagoSuscripcionOferta(suscriptor: Suscriptor): PagoSuscripcion{
+        const pagoSuscripcionOferta = new PagoSuscripcion();
+
+        
+        return pagoSuscripcionOferta; 
+    }
 
 
     CrearNuevoPagoMatricula(suscriptor: Suscriptor): NuevoPago {
@@ -76,7 +83,7 @@ function getValorSuscripcionAPagar(tipoSuscripcion : ITiposuscripcion) : IValorT
     } else if (tipoSuscripcion = ITiposuscripcion.PLATINUM) {
         return IValorTipoSuscripcion.PLATINUM;
     } else  {  
-        return IValorTipoSuscripcion.VOID; 
+        return IValorTipoSuscripcion.FREE; 
     }
     
 }
