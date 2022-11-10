@@ -1,7 +1,7 @@
 
-import { SubscriptionTime } from "../SubscriptionTime";
-import { SubscriptionQuantity } from "../SubscriptionQuantity";
-import { IExpirationUpdateMethodQuantity, IExpirationUpdateMethodTime } from "../../interfaces/interfaces";
+import { PlanSubscriptionTime } from "../PlanSubscriptionTime";
+import { PlanSubscriptionQuantity } from "../PlanSubscriptionQuantity";
+import { IUpdateMethodTime, IUpdateMethodQuantity } from "../../interfaces/interfacesPlanSubscription";
 
 export interface ICreatorSubscriptionService {
     
@@ -12,7 +12,7 @@ export interface ICreatorSubscriptionService {
      * @param daysExpired: dias para que el vencimiento de los suscriptores que posean esta suscripcion.
      * @param price: precio de la suscripcion.
      */
-    CreateNewSubscriptionTime(nameSubscription: string, updateMethod: IExpirationUpdateMethodTime, daysExpired: number, price : number): SubscriptionTime
+    CreateNewSubscriptionTime(nameSubscription: string, updateMethod: IUpdateMethodTime, daysExpired: number, price : number): PlanSubscriptionTime
 
     /**
      * Crear nueva suscripción con metodo actualización por cantidad de usos.
@@ -21,6 +21,6 @@ export interface ICreatorSubscriptionService {
      * @param amountUsesToExpired: cantidad de veces de uso para que expire la suscripción.
      * @param price: precio de la suscripcion.
      */
-    CreateNewSubscriptionQuantity(nameSubscription: string, updateMethod: IExpirationUpdateMethodQuantity,amountUsesToExpired: number, price : number): SubscriptionQuantity;
+    CreateNewSubscriptionQuantity(nameSubscription: string, updateMethod: IUpdateMethodQuantity,amountUsesToExpired: number, price : number): PlanSubscriptionQuantity;
     
 }

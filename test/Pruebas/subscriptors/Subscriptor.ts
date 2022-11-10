@@ -1,7 +1,9 @@
-import { IExpirationUpdateMethodQuantity, IExpirationUpdateMethodTime, ISuscriptionUpdateMethod } from "../interfaces/interfaces";
-import { Subscription } from "../subscriptions/Subscription";
-import { SubscriptionQuantity } from "../subscriptions/SubscriptionQuantity";
+import { ISubscriptorStatus } from "../interfaces/InterfacesSubscriptor";
+import { PlanSubscription } from "../plansubscriptions/PlanSubscription";
+import { PlanSubscriptionQuantity } from "../planSubscriptions/PlanSubscriptionQuantity";
+import { PlanSubscriptionTime } from "../planSubscriptions/PlanSubscriptionTime";
 import { PersonalInformation } from "./PersonalInformation";
+import { Subscription } from "./Subscription";
 
 
 export abstract class Subscriptor{
@@ -10,9 +12,30 @@ export abstract class Subscriptor{
     private _personalInformation: PersonalInformation; 
     private _expiredDaySubscription: Date; 
     private _expiredAmountUsesSubscription: number;
-    private _planSubscription: Subscription; 
+    private _status: ISubscriptorStatus; 
+    private _planSubscription: PlanSubscription;
+    private _subscription: Subscription; 
 
-    constructor() { }
+    constructor(planSubscription: PlanSubscription) {
+        this._planSubscription = planSubscription;
+        this._subscription = this.updateSubscription(this._planSubscription);
+    }
+
+    //* Subscription
+    updateSubscription(planSubscription : PlanSubscription) {
+        let subscription = new Subscription(planSubscription); 
+        this._subscription = subscription; 
+        return subscription; 
+    }
+
+    // set subscription(planSubscription : PlanSubscription) {
+    //     let subscription = new Subscription(planSubscription); 
+    //     this._subscription = subscription; 
+    // }
+
+    get subscription() : Subscription {
+        return this._subscription; 
+    }
 
     //* Personal Info
     set personalInformation(personalInformation: PersonalInformation) {
@@ -25,45 +48,68 @@ export abstract class Subscriptor{
         return this._personalInformation;
     }
 
-    //* expired Subscripton Day
+    /**
+     * @return cantidad de dias que le quedan al suscriptor para vencer su plan. 
+     */
     get expiredDaySubscription(): Date{
         return this._expiredDaySubscription;
     }
 
-    //* expired Subscripton Amount Uses.
+    /**
+    * @return cantidad de dias que le quedan al suscriptor para vencer su plan. 
+    */
     get expiredAmountUsesSubscription(): number{
         return this._expiredAmountUsesSubscription;
     }
 
-    public updateExpiredDaySubscription() {
-        
-    }
 
     public updateExpiredAmountUsesSubscription() {
         
     }
-    
-
     //* PLAN SUBSCRIPTION
-    get planSubscription(): Subscription{
+    get planSubscription(): PlanSubscription {
         return this._planSubscription;
     }
 
-    set planSubscription(planSubscription: Subscription) {
+    set planSubscription(planSubscription: PlanSubscription) {
         this._planSubscription = planSubscription;
     }
-}
+    
+    /**
+    * ? Actualiza la fecha de vencimiento del suscriptor y cambia el estado del suscriptor en base al metodo de actualizacion de cada suscripcion.
+    * @param diasAActualizar : numero dias que quiero sumarle a la fecha de vencimiento.
+    * @param metodoActualizacion: metodo para actualizar la fecha vencimiento.
+    * @returns nueva fecha de vencimiento.
+    */
+    // public updateExpiredDaySubscription(diasAActualizar: number = DiasActualizacionFechaVencimientoDefault, metodoActualizacion: IMetodoActualizacionFechaVencimiento = MetodoActualizacionVencimientoDefault) {
+        
+    //         if (metodoActualizacion = IMetodoActualizacionFechaVencimiento.FECHAVENCIMIENTOSUSCRIPCION) {
+    //                 this._fechaVencimientoSuscripcion = sumarDiasAFechas(this._fechaVencimientoSuscripcion, diasAActualizar)
+    //             } else {
+    //                     let fechaPagoHoy = new Date();
+    //                     this._fechaVencimientoSuscripcion = sumarDiasAFechas(fechaPagoHoy, diasAActualizar)
+    //                 }
+                
+    //                 if (this._fechaVencimientoSuscripcion.toDateString() <= new Date().toDateString()) {
+    //         this._estado = IEstadoSuscriptor.ACTIVO;
+    //     }
+    
+    //     return this._fechaVencimientoSuscripcion;
+    // }
 
-
-
-export class SubscriptorGym extends Subscriptor{
-
-    constructor() {
-        super()
+    set status(status: ISubscriptorStatus) {
+        this._status = status; 
     }
 
-
+    get status(): ISubscriptorStatus {
+        return this._status;
+    }
+    
 }
+
+
+
+
     // set expiredSubscripton(expiredSubscripton: number | Date) {
 
     //     if (this._planSubscription.updateMethod === ISuscriptionUpdateMethod.TIME) {

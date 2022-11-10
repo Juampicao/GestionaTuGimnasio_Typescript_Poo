@@ -1,21 +1,53 @@
-import { IExpirationUpdateMethodQuantity } from "../../interfaces/interfaces";
-import { SubscriptionQuantity } from "../../subscriptions/SubscriptionQuantity";
-import { SubscriptorGym } from "../../subscriptors/Subscriptor";
+import { amountToExpiredDefault, amountToExpiredNull, daysToExpiredDefault, daysToExpiredNull, newPlanSubscriptionQuantityDefault, newPlanSubscriptionTimeDefault } from "../../helpers/ValoresDefault";
+import { PlanSubscription } from "../../planSubscriptions/PlanSubscription";
+import { Subscriptor } from "../../subscriptors/Subscriptor";
 
-describe('Escenario 01 - SUBSCRIPTOR - PLAN SUBSCRIPTION', () => {
+export class SubscriptorGym extends Subscriptor{
 
+    constructor(planSubscription : PlanSubscription) {
+        super(planSubscription)
+    }
+}
+
+describe('Escenario 01 - SUBSCRIPTOR - Crear default', () => {
+   
     // Default
-    test('1.1 - Crear ', () => {
-        let subscriptor1 = new SubscriptorGym()
-      
-        let subscription1 = new SubscriptionQuantity("juan", IExpirationUpdateMethodQuantity.AMOUNTUSES, 10, 1000);
+    test('1.1 - Crear SUBSCRIPTOR PLAN QUANTITY', () => {
 
-        subscriptor1.planSubscription = subscription1; 
-        subscriptor1.updateExpiredAmountUsesSubscription ; 
+        let planSubscription = newPlanSubscriptionQuantityDefault
 
-        expect(subscriptor1.planSubscription).toBe(subscription1)
+        let subscriptor1 = new SubscriptorGym(planSubscription)
+    
+        subscriptor1.planSubscription = planSubscription; 
+        let amountToExpired = subscriptor1.subscription.amountToExpired; 
+        let daysToExpired = subscriptor1.subscription.daysToExpired;
+        console.log(`AMOUNT ${amountToExpired} , DAYS ${daysToExpired}`)
+        
+
+        expect(amountToExpired).toBe(amountToExpiredDefault);
+        expect(daysToExpired).toBe(daysToExpiredNull)
+    });
+
+    test('1.2 - Crear SUBSCRIPTOR PLAN TIME  ', () => {
+
+        let planSubscription = newPlanSubscriptionTimeDefault
+
+        let subscriptor1 = new SubscriptorGym(planSubscription)
+    
+        subscriptor1.planSubscription = planSubscription; 
+        let amountToExpired = subscriptor1.subscription.amountToExpired; 
+        let daysToExpired = subscriptor1.subscription.daysToExpired;
+        console.log(`AMOUNT ${amountToExpired} , DAYS ${daysToExpired}`)
+        
+
+        expect(amountToExpired).toBe(amountToExpiredNull);
+        expect(daysToExpired).toBe(daysToExpiredDefault)
     });
 });
+
+
+
+
 
 
 // describe('Escenario 01 - SUBSCRIPTOR - PERSONAL INFORMATION', () => {

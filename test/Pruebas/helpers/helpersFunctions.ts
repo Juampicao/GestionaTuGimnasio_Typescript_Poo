@@ -30,3 +30,15 @@ export function isValidNumberReturnNumber(numeroParametro : number, minNumber: n
     } 
     return numeroParametro; 
 }
+
+
+/**
+ * Función que suma una cantidad de dias X a una fecha vieja.
+ * @param fechaVieja : Fecha que deseo actualizar.
+ * @param diasAActualizar : Cantidad de dias a sumar.
+ * @returns 
+ */
+export function sumarDiasAFechas(fechaVieja : Date, diasAActualizar : number) {
+  fechaVieja.setDate(fechaVieja.getDate() + diasAActualizar);
+  return fechaVieja;
+}
